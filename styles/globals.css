@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General Styles */
+body {
+  @apply bg-gray-100 text-gray-900 text-center;
+}
+
+.container {
+  @apply max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg transition-transform duration-300;
+}
+
+.container:hover {
+  @apply transform -translate-y-1 shadow-2xl;
+}
+
+/* Title & Subtitle */
+.title {
+  @apply text-3xl font-bold text-red-600 uppercase tracking-wide mb-2;
+}
+
+.subtitle {
+  @apply text-lg text-gray-600 mb-4;
+}
+
+/* Search Box */
+.search-container {
+  @apply flex justify-center gap-4 mb-4;
+}
+
+.search-input {
+  @apply flex-1 p-3 text-lg border-2 border-red-600 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-red-400;
+}
+
+.search-button {
+  @apply bg-red-600 text-white px-5 py-3 text-lg rounded-lg transition hover:bg-red-700;
+}
+
+/* Results Section */
+.results-card {
+  @apply text-left p-6 bg-white rounded-lg shadow-md mb-6;
+}
+
+.results-text {
+  @apply text-lg text-gray-800 leading-relaxed;
+}
+
+/* Affiliate Links Section */
+.affiliate-results {
+  @apply text-left p-6 bg-white rounded-lg shadow-md mt-6 transition duration-300;
+}
+
+.affiliate-results:hover {
+  @apply transform -translate-y-1 shadow-xl;
+}
+
+.affiliate-title {
+  @apply text-xl font-semibold mb-4 text-red-600;
+}
+
+.affiliate-list {
+  @apply list-none p-0;
+}
+
+.affiliate-item {
+  @apply py-3 border-b border-gray-300 transition;
+}
+
+.affiliate-item:hover {
+  @apply bg-gray-100;
+}
+
+.affiliate-link {
+  @apply text-lg font-semibold text-blue-600 flex items-center;
+}
+
+.affiliate-link:hover {
+  @apply underline;
+}
+
+.affiliate-url {
+  @apply text-gray-500 text-sm ml-2;
+}
+

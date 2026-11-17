@@ -1,0 +1,155 @@
+:root {
+  --bg: #f7f4f1;
+  --ink: #1c1917;
+  --muted: #6b6560;
+  --accent: #ff7a59;
+  --accent-ink: #fff;
+  --line: #e4ddd6;
+  --ok: #1f6b4a;
+  --err: #9b1c1c;
+  --row: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 420px;
+  max-height: 560px;
+  font: 13px/1.4 "Segoe UI", "Helvetica Neue", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(120% 80% at 0% 0%, #ffe8e0 0%, transparent 55%),
+    radial-gradient(100% 70% at 100% 0%, #e8f2ef 0%, transparent 50%),
+    var(--bg);
+  padding: 14px 14px 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  margin: 2px 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 10px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(0.96);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+#downloadBtn {
+  background: #2d2a26;
+}
+
+.status {
+  min-height: 1.2em;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.status.error {
+  color: var(--err);
+}
+
+.status.ok {
+  color: var(--ok);
+}
+
+.preview-wrap {
+  margin-top: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--row);
+}
+
+.preview-wrap.hidden {
+  display: none;
+}
+
+.preview-head {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.table-scroll {
+  max-height: 340px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  word-break: break-word;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #faf8f6;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+td a {
+  color: #0b5fff;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 28%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 26%;
+}

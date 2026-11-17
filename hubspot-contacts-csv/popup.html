@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HubSpot Contacts → CSV</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>HubSpot Contacts → CSV</h1>
+      <p class="sub">Scrape visible rows → preview → download</p>
+    </header>
+
+    <div class="actions">
+      <button id="scrapeBtn" type="button">Scrape visible contacts</button>
+      <button id="downloadBtn" type="button" disabled>Download CSV</button>
+    </div>
+
+    <p id="status" class="status" role="status"></p>
+
+    <div id="previewWrap" class="preview-wrap hidden">
+      <div class="preview-head">
+        <span id="countLabel"></span>
+      </div>
+      <div class="table-scroll">
+        <table id="previewTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone Number</th>
+              <th>HubSpot URL</th>
+            </tr>
+          </thead>
+          <tbody id="previewBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

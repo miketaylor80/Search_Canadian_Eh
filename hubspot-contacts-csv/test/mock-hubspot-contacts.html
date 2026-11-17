@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mock HubSpot Contacts — local scrape test</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 24px;
+        background: #f5f8fa;
+        color: #33475b;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      p.hint {
+        max-width: 640px;
+        color: #516f90;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 900px;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      }
+      th,
+      td {
+        border-bottom: 1px solid #dfe3eb;
+        padding: 10px 12px;
+        text-align: left;
+      }
+      th {
+        background: #f5f8fa;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      a {
+        color: #0091ae;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .name-cell a {
+        color: #0091ae;
+      }
+      .column-phone span span {
+        font-variant-numeric: tabular-nums;
+      }
+      code {
+        background: #eaf0f6;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mock HubSpot Contacts index</h1>
+    <p class="hint">
+      Load the unpacked extension, open this file via a local server
+      (<code>python3 -m http.server</code> from the extension folder), then use the
+      popup → <strong>Scrape visible contacts</strong>. This table mirrors the
+      selectors the extension looks for.
+    </p>
+
+    <table data-test-id="contacts-table" class="table" role="grid">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td class="name-cell">
+            <a href="/contacts/12345678/record/0-1/101">Ada Lovelace</a>
+          </td>
+          <td class="column-phone"><span><span>+1 (416) 555-0101</span></span></td>
+          <td>ada@example.com</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td class="name-cell">
+            <a href="/contacts/12345678/contact/202">Grace Hopper</a>
+          </td>
+          <td class="column-phone"><span><span>+1 (604) 555-0199</span></span></td>
+          <td>grace@example.com</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td class="name-cell">
+            <a href="/contacts/12345678/objects/0-1/record/303">Katherine Johnson</a>
+          </td>
+          <td class="column-phone"><span><span></span></span></td>
+          <td>katherine@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
